@@ -26,5 +26,9 @@ RSpec.describe HexSide do
     it "-1 should raise an error" do
       expect { HexSide.new(-1) }.to raise_error(ArgumentError)
     end
+
+    it ":inside should raise an error" do
+      expect { HexSide.new(:inside) }.to raise_error(ArgumentError)
+    end
   end
 end
