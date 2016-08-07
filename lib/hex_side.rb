@@ -2,7 +2,7 @@ require 'side'
 class HexSide < Side
   attr_reader :position, :connected
   def initialize(position, connected = false)
-    raise if position > 5
+    raise ArgumentError.new("invalid position") if (position > 5) || (position < 0)
     super()
     @position = position
     @connected = connected
