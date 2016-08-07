@@ -11,6 +11,13 @@ RSpec.describe HexSide do
     end
   end
 
+  describe "created with a position name" do
+    let(:top_right) { HexSide.new(:top_right) }
+    it "top right should be position 0" do
+      expect(top_right.position).to eq 0
+    end
+  end
+
   describe "created with invalid position" do
     it "6 should raise an error" do
       expect { HexSide.new(6) }.to raise_error(ArgumentError)
