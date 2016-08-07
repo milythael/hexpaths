@@ -5,5 +5,9 @@ RSpec.describe HexSide do
     it "should be in the correct position" do
       expect(top_right.position).to eq 0
     end
+
+    it "should not be connected" do
+      expect(top_right.connected).to be false
+    end
   end
 end
